@@ -15,6 +15,8 @@ public class MainController {
 	
 	@GetMapping(value="getting")
 	public List<idDto> getting() {
-		return mapper.getting();
+		List<idDto> list = mapper.getting();
+		System.out.println(list);
+		return list;
 	}
 }
