@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="container"></div>
+	<script>
+		fetch("http://localhost:9000/te/getting")
+		.then(response => response.json()).then(data => {
+			var container = document.querySelector("#container");
+			for(var d of data) {
+				container.innerText += d.num + " | "
+			}
+		})
+	</script>
+</body>
+</html>
